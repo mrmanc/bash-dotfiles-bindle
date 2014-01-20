@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Borrowed from http://bit.ly/multiple-sss-configs
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+ssh() {
+    TMPDIR=$THIS_DIR # Tells mktemp where to put tmp files
+    case "$(uname -s)" in
+        Linux)
+            tmp_fifo=$(mktemp -u --suffix=._ssh_fifo)
+            ;;
+        Darwin)
+            tmp_fifo=$(mktemp -u -t ._ssh_fifo)
+            ;;
+        *)
+            echo 'unsupported OS'
+            exit
+            ;;
+    esac
+
+    # cleanup first
+    rm $TMPDIR/._ssh_fifo* 2>/dev/null
+
+    mkfifo "$tmp_fifo" 
+    cat ~/.ssh/config $THIS_DIR/config >"$tmp_fifo" 2>/dev/null & 
+    /usr/bin/ssh -F "$tmp_fifo" "$@"
+#    rm "$tmp_fifo"
+}
+echo -e "$GREEN\n * Mixing ssh config from $THIS_DIR/config with ~/.ssh/config\n$RESET_TEXT"
+ssh $*

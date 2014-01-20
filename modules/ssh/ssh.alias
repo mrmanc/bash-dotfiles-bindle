@@ -1,0 +1,2 @@
+#!/bin/bash
+alias ssh='$BINDLE_PATH/modules/ssh/bin/ssh'
