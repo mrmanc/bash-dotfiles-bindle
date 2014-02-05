@@ -27,5 +27,5 @@ ssh() {
     /usr/bin/ssh -F "$tmp_fifo" "$@"
 #    rm "$tmp_fifo"
 }
-echo -e "$GREEN\n * Mixing ssh config from $THIS_DIR/config with ~/.ssh/config\n$RESET_TEXT"
+echo -e "$GREEN\n * Mixing ssh config from $THIS_DIR/config with ~/.ssh/config\n$RESET_TEXT" >&2
 ssh $*
