@@ -19,4 +19,4 @@ bin_dirs=($BINDLE_PATH/modules/*/bin)
 PREVIOUS_IFS=$IFS IFS=':'
 bin_dirs=("${bin_dirs[*]}")
 IFS=$PREVIOUS_IFS
-PATH=$PATH:$bin_dirs
+PATH=$bin_dirs:$PATH
