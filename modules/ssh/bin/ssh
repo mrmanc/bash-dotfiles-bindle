@@ -8,7 +8,7 @@ ssh() {
     TMPDIR=$THIS_DIR # Tells mktemp where to put tmp files
     case "$(uname -s)" in
         Linux)
-            tmp_fifo=$(mktemp -u --suffix=._ssh_fifo)
+            tmp_fifo=$(mktemp -u ._ssh_fifo.XXXXXXXXXXXXXXXXXXXXX)
             ;;
         Darwin)
             tmp_fifo=$(mktemp -u -t ._ssh_fifo)
