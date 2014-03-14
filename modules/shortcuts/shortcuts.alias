@@ -2,3 +2,4 @@
 
 alias ll='ls -al'
 alias logs='set | grep "logs="'
+alias http-server='python -m SimpleHTTPServer 8081'
