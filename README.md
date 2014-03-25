@@ -1,6 +1,8 @@
 dot-file-bindle
 ===============
 
+See the [blog post](http://markcrossfield.co.uk/2014-03-25-bash-dotfiles-bindle.html)
+
 ## Aims
 
 * To not ‘install’ anything
