@@ -20,3 +20,4 @@ See the [blog post](http://markcrossfield.co.uk/2014-03-25-bash-dotfiles-bindle.
 * Recording of common typos on the command line for future consideration
 * A shortcut to start an HTTP server serving static content from a directory
 * Environment variables and functions to output coloured text
+* Hostname is set as the tab title (no idea how this will work on non OS X systems, but don’t think I’ve broken my rule…)
