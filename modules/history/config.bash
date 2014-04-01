@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Record commands immediately so you don't lose them if the session terminates
-# Why does '$PROMPT_COMMAND;history -a' not work?
-export PROMPT_COMMAND='history -a'
+addPromptCommand 'history -a'
 
 # Include the time stamp with commands
 export HISTTIMEFORMAT='%F %T '
