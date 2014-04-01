@@ -1,2 +1,2 @@
 #!/bin/bash
-export PS1="$WHITE[\u@\h]$RESET_TEXT $BLUE\w$RESET_TEXT \[$YELLOW\]$\[$RESET_TEXT\] "
+export PS1="$WHITE[\u@\h$PROMPT_HOST_SUFFIX]$RESET_TEXT $BLUE\w$RESET_TEXT \[$YELLOW\]$\[$RESET_TEXT\] "
