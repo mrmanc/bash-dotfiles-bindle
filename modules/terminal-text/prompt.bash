@@ -2,7 +2,7 @@
 systemSymbol=""
 case "$(uname -s)" in
 	Linux)
-		systemSymbol=" 🐧"
+		systemSymbol=" 🐧 "
   		;;
 	Darwin)
 		systemSymbol="$GREEN $RESET_TEXT"
