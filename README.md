@@ -15,9 +15,11 @@ See the [blog post](http://markcrossfield.co.uk/2014-03-25-bash-dotfiles-bindle.
 
 ## Installation
 
+I suggest you fork the repo, so that you can make your own additions. If you do anything cool then give me a shout / send me a pull request and I will look at merging it in.
+
 From wherever you want to check out the project, run:
 
-    git clone https://github.com/mrmanc/bash-dotfiles-bindle.git
+    git clone https://github.com/[YOUR-USERNAME]/bash-dotfiles-bindle.git
     bash-dotfiles-bindle/install.sh
 
 Done.
