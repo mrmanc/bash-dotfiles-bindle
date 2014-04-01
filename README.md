@@ -9,8 +9,23 @@ See the [blog post](http://markcrossfield.co.uk/2014-03-25-bash-dotfiles-bindle.
 * To be entirely self contained other than a single hook into the user’s profile
 * To be removed as easily as removing the single hook and removing the directory
 * To be easily extended by adding a single directory, potentially outside the project
+* To be updated by simply running `git pull`
 * To be ignorant of whether you are on a Mac
 * To play nicely with existing profiles and configuration
+
+## Installation
+
+From wherever you want to check out the project, run:
+
+    git clone https://github.com/mrmanc/bash-dotfiles-bindle.git
+    bash-dotfiles-bindle/install.sh
+
+Done.
+
+To update:
+
+    cd bash-dotfiles-bindle
+    git pull
 
 ## Features
 
