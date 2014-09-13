@@ -1,2 +1,3 @@
 #!/bin/bash
-alias gerp='grep' 
+alias gerp='grep'
+alias tracert='traceroute'
