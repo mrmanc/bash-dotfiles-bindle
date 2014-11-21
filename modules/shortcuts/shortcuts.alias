@@ -3,4 +3,5 @@
 alias ll='ls -al'
 alias logs='set | grep "logs="'
 alias http-server='python -m SimpleHTTPServer 8081'
-alias hidden-characters='cat -v'
+alias hidden-characters='cat -vet'
+alias hidden='cat -vet'
