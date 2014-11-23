@@ -1,0 +1,4 @@
+#!/bin/bash
+
+directory=$(echo $1 | sed -e "s/\/$//" ) # Remove trailing '/'
+du -s "$directory"/* | sort -n | cut -f 2- | tr '\n' '\0' | xargs -0 -I {} du -sh "{}"
