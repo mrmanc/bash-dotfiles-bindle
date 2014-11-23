@@ -1,4 +1,9 @@
 #!/bin/bash
 
 directory=$(echo $1 | sed -e "s/\/$//" ) # Remove trailing '/'
-du -s "$directory"/* | sort -n | cut -f 2- | tr '\n' '\0' | xargs -0 -I {} du -sh "{}"
+
+# ‘cut -f2’ handles directory names with spaces as it uses tab as the delimeter
+# translating newline to NUL lets us use ‘xargs -0’ which handles quotes in directory names
+# could use ‘xargs -d’ but not supported on all systems
+
+du -s "$directory"/* | sort -n | cut -f2 | tr '\n' '\0' | xargs -0 -I {} du -sh "{}"
