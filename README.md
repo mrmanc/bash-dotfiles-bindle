@@ -38,3 +38,4 @@ To update:
 * A shortcut to start an HTTP server serving static content from a directory
 * Environment variables and functions to output coloured text
 * Hostname is set as the tab title (no idea how this will work on non OS X systems, but don’t think I’ve broken my rule…)
+* Correctly sorted du -sh to stand in while we wait for `sort -h` to become available
