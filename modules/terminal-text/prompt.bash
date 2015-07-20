@@ -8,4 +8,5 @@ case "$(uname -s)" in
 		systemSymbol="$GREEN $RESET_TEXT"
 		;;
 esac
-export PS1="${WHITE}\u@\h${PROMPT_HOME_IDENTIFIER}${systemSymbol} ${WHITE}\e[44m$(date "+%H:%M")${RESET_TEXT} ${BLUE}\w${RESET_TEXT}\[${YELLOW}\]\n$\[${RESET_TEXT}\] "
+# Handy information: http://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/
+export PS1="${WHITE}\u@\h${PROMPT_HOME_IDENTIFIER}${systemSymbol} ${WHITE}\e[44m\A${RESET_TEXT} ${BLUE}\w${RESET_TEXT}\[${YELLOW}\]\n$\[${RESET_TEXT}\] "
