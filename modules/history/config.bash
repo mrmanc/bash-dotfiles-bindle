@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Record commands immediately so you don't lose them if the session terminates
-addPromptCommand 'history -a'
+addPromptCommand 'history -a; history -c; history -r;'
 
 # Include the time stamp with commands
 export HISTTIMEFORMAT='%F %T '
