@@ -29,6 +29,12 @@ To update:
     cd bash-dotfiles-bindle
     git pull
 
+## Modifying
+
+Either locate which module you want to change or create a new module directory. Inside the module, put any autocomplete commands in a script named `autocomplete`, any aliases in a files named `something.alias`, any functions in files named `something.functions` and any other bash you want to be run in files named `something.bash`. Anything you put in a bin directory under a module will be added to the path.
+
+There is no functionality to make actual dotfiles (e.g. .gitconfig) appear in your home directory, as I couldn’t think of a nice way of doing that without breaching one of the aims above. Instead, I have used a [script](https://github.com/mrmanc/bash-dotfiles-bindle/blob/master/modules/ssh/bin/ssh) to wrap the command and merge in configuration at run time (although at the moment this leaves tmp files behind).
+
 ## Features
 
 * Colourised Grep highlighting
