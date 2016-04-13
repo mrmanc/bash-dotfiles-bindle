@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git filter-branch --prune-empty --tree-filter '
+  if [[ ! -e dropwizard-metrics20-events-bundle ]];
+  then
+	mkdir -p dropwizard-metrics20-events-bundle;
+        git ls-tree --name-only $GIT_COMMIT | xargs -I files mv files dropwizard-metrics20-events-bundle;
+  fi'
