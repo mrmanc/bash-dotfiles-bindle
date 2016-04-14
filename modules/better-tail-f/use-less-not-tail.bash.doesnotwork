@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function tail() {
+  case $* in
+    -f* ) shift 1; command less +F "$@" | more ;;
+    * ) command tail "$@" ;;
+  esac
+}
