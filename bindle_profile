@@ -1,6 +1,6 @@
 #!/bin/bash
 export BINDLE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-echo -e "\033[0;35mApplying configuration from dotfiles in $BINDLE_PATH\033[0m"
+>&2 echo -e "\033[0;35mApplying configuration from dotfiles in $BINDLE_PATH\033[0m"
 
 # Execute the autocomplete files in each module
 for autocomplete in $BINDLE_PATH/modules/*/autocomplete; do . $autocomplete; done;
