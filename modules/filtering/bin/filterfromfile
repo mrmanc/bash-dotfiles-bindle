@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Filter stdin to only include lines from file supplied as argument
+comm -23 - $1
