@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias ls='hash exa && alias l='exa' && echo -e "${RED}Don’t forget exa! (aliased as ‘l’)${RESET_TEXT}"; ls'
