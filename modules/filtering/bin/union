@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Reduce two sets of text to unique lines
+cat $1 $2 | sort | uniq
