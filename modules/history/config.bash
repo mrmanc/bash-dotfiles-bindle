@@ -4,13 +4,14 @@
 addPromptCommand 'history -a; history -c; history -r;'
 
 # Include the time stamp with commands
-export HISTTIMEFORMAT='%F %T '
+HISTTIMEFORMAT='%F %T '
 
 # Ignore super secret commands starting with a space
-export HISTCONTROL=ignorespace
+HISTCONTROL=ignorespace
 
 # All the history.
-export HISTSIZE=10000
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 
 # Append instead of replacing
 shopt -s histappend
