@@ -1,0 +1,3 @@
+#!/bin/bash
+pbpaste | cat | sed -e "s/^/> /" | pbcopy
+pbpaste
